@@ -23,7 +23,7 @@ const forecast = (latitude, longitude, callback) => {
           body.current.precip +
           "% chance of rain."
       );
-    }
+    }s
   });
 };
 
