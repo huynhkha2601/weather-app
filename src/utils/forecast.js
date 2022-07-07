@@ -2,7 +2,7 @@ const request = require("request");
 
 const forecast = (latitude, longitude, callback) => {
   const url =
-    "http://api.weatherstack.com/current?access_key=34de1ee1a8db505fc2a592074b220113&query=New York" +
+    "http://api.weatherstack.com/current?access_key=34de1ee1a8db505fc2a592074b220113&query=" +
     latitude +
     "," +
     longitude +
