@@ -20,6 +20,10 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
+app.post("", (req, res) => {
+  res.json(req, res);
+});
+
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather",
@@ -54,7 +58,8 @@ app.get("/weather", (req, res) => {
     (error, { latitude, longitude, location } = {}) => {
       if (error) {
         return res.send({ error });
-      }x
+      }
+      x;
 
       forecast(latitude, longitude, (error, forecastData) => {
         if (error) {
