@@ -1,4 +1,5 @@
 // const path = require("path");
+const { Logger, ConsoleLogger } = require("@nestjs/common");
 const express = require("express");
 // const hbs = require("hbs");
 // const geocode = require("./utils/geocode");
@@ -26,6 +27,7 @@ app.get("", (req, res) => {
 
 app.post("/", (req, res) => {
   console.log(req, res);
+  ConsoleLogger(req, res);
   res.redirect("/");
 });
 
