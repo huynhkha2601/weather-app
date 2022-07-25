@@ -21,11 +21,12 @@ const port = process.env.PORT || 3001;
 // app.use(express.static(publicDirectoryPath));
 
 app.get("", (req, res) => {
-  res.json("Hello world!")
-})
+  res.json("Hello world!");
+});
 
 app.post("/", (req, res) => {
-  res.json(req);
+  console.log(req, res);
+  res.redirect("/");
 });
 
 // app.get("", (req, res) => {
