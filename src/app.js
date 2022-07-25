@@ -54,7 +54,7 @@ app.get("/weather", (req, res) => {
     (error, { latitude, longitude, location } = {}) => {
       if (error) {
         return res.send({ error });
-      }
+      }x
 
       forecast(latitude, longitude, (error, forecastData) => {
         if (error) {
@@ -100,6 +100,10 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.post("/slack", async (req, res) => {
+  console.log(req.body);
+});
+
+app.listen(3001, () => {
   console.log(`Server is up on port ${port}. `);
 });
